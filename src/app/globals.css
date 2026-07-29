@@ -1,0 +1,1081 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-heading);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-accent-blue: var(--accent-blue);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+/*
+  BRAXOVA is a permanently dark, premium-tech brand — no light theme toggle.
+  Tokens are defined once on :root using the brand palette; the .dark block
+  mirrors them so any `dark:` utility Radix/shadcn primitives rely on
+  internally still resolves correctly (html carries class="dark").
+*/
+:root,
+.dark {
+  --background: #070b14;
+  --foreground: #ffffff;
+  --card: #111827;
+  --card-foreground: #ffffff;
+  --popover: #111827;
+  --popover-foreground: #ffffff;
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
+  --secondary: #1a2233;
+  --secondary-foreground: #ffffff;
+  --muted: #131b2c;
+  --muted-foreground: #cbd5e1;
+  --accent: #1d2b45;
+  --accent-foreground: #ffffff;
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.1);
+  --ring: #3b82f6;
+  --chart-1: #3b82f6;
+  --chart-2: #60a5fa;
+  --chart-3: #93c5fd;
+  --chart-4: #1d4ed8;
+  --chart-5: #1e3a8a;
+  --radius: 0.75rem;
+  --sidebar: #111827;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #2563eb;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #1d2b45;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+  --sidebar-ring: #3b82f6;
+
+  /* Brand-specific extras beyond the shadcn token set */
+  --accent-blue: #3b82f6;
+  color-scheme: dark;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  html {
+    @apply scroll-smooth;
+  }
+  /* Keyboard-only focus ring. Several custom-styled links (nav, footer,
+     cards, socials) carried no visible focus state at all — this gives
+     every interactive element one consistent, on-brand ring. */
+  a:focus-visible,
+  button:focus-visible,
+  [role="button"]:focus-visible {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+}
+
+/* ============ Typography helpers ============ */
+.font-display {
+  font-family: var(--font-heading);
+}
+.text-gradient {
+  background: linear-gradient(100deg, #ffffff 15%, #93c5fd 55%, #3b82f6 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent-blue);
+  position: relative;
+  padding-left: 22px;
+}
+.eyebrow::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  translate: 0 -50%;
+  width: 14px;
+  height: 2px;
+  background: var(--color-accent-blue);
+}
+
+/* ============ Background FX ============ */
+.bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(
+    ellipse 80% 60% at 50% 0%,
+    black 40%,
+    transparent 100%
+  );
+}
+.bg-noise {
+  position: absolute;
+  inset: 0;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.hero-glow {
+  position: absolute;
+  top: -180px;
+  left: 50%;
+  translate: -50% 0;
+  width: 1100px;
+  height: 700px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(37, 99, 235, 0.28),
+    rgba(37, 99, 235, 0.08) 45%,
+    transparent 70%
+  );
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: -1;
+}
+.hero-glow-bottom {
+  top: auto;
+  bottom: -220px;
+  width: 900px;
+  height: 600px;
+  opacity: 0.7;
+}
+.section-glow {
+  position: absolute;
+  top: 10%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.16),
+    transparent 65%
+  );
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: -1;
+}
+.section-glow-alt {
+  right: auto;
+  left: -10%;
+  top: 30%;
+}
+
+/* ============ Glass panels ============ */
+.glass-panel {
+  background: rgba(17, 24, 39, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 8px 40px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* ============ Buttons (brand gloss on top of shadcn Button) ============ */
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.15) inset,
+    0 8px 24px -8px rgba(37, 99, 235, 0.65);
+}
+.btn-glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.25) 50%,
+    transparent 70%
+  );
+  translate: -120% 0;
+  transition: translate 0.6s ease;
+}
+.btn-glow:hover::before {
+  translate: 120% 0;
+}
+
+/* ============ Hero device scene ============ */
+.device-scene {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.device-glow {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.32), transparent 72%);
+  filter: blur(60px);
+  z-index: -1;
+}
+
+/* Float animation now lives in Framer Motion (device-frame.tsx), which
+   also respects prefers-reduced-motion in JS. These rules only handle
+   static placement, physical depth/rotation and shadow — never motion.
+   Every bezel uses a brushed-metal gradient + inset highlight rather than
+   a flat border, so the shell reads as machined aluminum, not a card. */
+.device.laptop {
+  position: relative;
+  width: min(78%, 460px);
+  transform-style: preserve-3d;
+  filter: drop-shadow(0 26px 20px rgba(0, 0, 0, 0.45))
+    drop-shadow(0 54px 46px rgba(0, 0, 0, 0.35));
+}
+.laptop-screen {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(155deg, #232c40, #131a29);
+  border: 5px solid transparent;
+  border-radius: 13px 13px 2px 2px;
+  aspect-ratio: 16/10;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 0 32px -6px rgba(59, 130, 246, 0.28);
+}
+.laptop-screen::before {
+  /* camera dot */
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  translate: -50% 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #05070c;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05);
+  z-index: 3;
+}
+.laptop-hinge {
+  height: 4px;
+  margin: 0 3%;
+  background: linear-gradient(180deg, #0a0e17, #161c2b);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+.laptop-base {
+  height: 15px;
+  background: linear-gradient(180deg, #2a3348, #141a29);
+  border-radius: 0 0 9px 9px;
+  clip-path: polygon(2.5% 0, 97.5% 0, 100% 100%, 0% 100%);
+  box-shadow: 0 10px 18px -4px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+.laptop-base::after {
+  /* trackpad hint */
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  translate: -50% 0;
+  width: 20%;
+  height: 60%;
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.device.tablet {
+  position: absolute;
+  width: 30%;
+  max-width: 190px;
+  bottom: 0%;
+  left: -5%;
+  rotate: -4deg;
+  transform-style: preserve-3d;
+  filter: drop-shadow(0 22px 18px rgba(0, 0, 0, 0.4))
+    drop-shadow(0 40px 34px rgba(0, 0, 0, 0.3));
+}
+.tablet-screen {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  background: linear-gradient(155deg, #232c40, #131a29);
+  border: 4px solid transparent;
+  border-radius: 26px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 26px -6px rgba(59, 130, 246, 0.25);
+}
+.tablet-screen::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  translate: -50% 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #05070c;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05);
+  z-index: 3;
+}
+.device.phone {
+  position: absolute;
+  width: 20%;
+  max-width: 118px;
+  top: 1%;
+  right: -6%;
+  rotate: 5deg;
+  transform-style: preserve-3d;
+  filter: drop-shadow(0 18px 14px rgba(0, 0, 0, 0.45))
+    drop-shadow(0 32px 26px rgba(0, 0, 0, 0.32));
+}
+.phone-screen {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 9/19.5;
+  background: linear-gradient(155deg, #232c40, #131a29);
+  border: 3px solid transparent;
+  border-radius: 32px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 0 22px -5px rgba(59, 130, 246, 0.28);
+}
+.phone-island {
+  position: absolute;
+  top: 9px;
+  left: 50%;
+  translate: -50% 0;
+  width: 30%;
+  height: 7px;
+  border-radius: 999px;
+  background: #05070c;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04);
+  z-index: 3;
+}
+.phone-home-indicator {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  translate: -50% 0;
+  width: 34%;
+  height: 3px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.4);
+  z-index: 3;
+}
+
+/* ============ Desktop monitor frame (Studio Display proportions) ============ */
+.device.monitor {
+  position: absolute;
+  width: min(64%, 400px);
+  top: -11%;
+  left: 0%;
+  rotate: -2deg;
+  transform-style: preserve-3d;
+  filter: drop-shadow(0 18px 16px rgba(0, 0, 0, 0.3))
+    drop-shadow(0 34px 30px rgba(0, 0, 0, 0.2));
+}
+.monitor-screen {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(155deg, #232c40, #131a29);
+  border: 6px solid transparent;
+  border-radius: 15px;
+  aspect-ratio: 16/10;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px -6px rgba(59, 130, 246, 0.2);
+}
+.monitor-screen::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  translate: -50% 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #05070c;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05);
+  z-index: 3;
+}
+.monitor-neck {
+  width: 16%;
+  height: 16px;
+  margin: 0 auto;
+  clip-path: polygon(15% 0, 85% 0, 100% 100%, 0% 100%);
+  background: linear-gradient(180deg, #2a3348, #161c2b);
+}
+.monitor-base {
+  width: 30%;
+  height: 7px;
+  margin: 0 auto;
+  border-radius: 5px;
+  background: linear-gradient(180deg, #2e384f, #161c2b);
+  box-shadow: 0 10px 18px -4px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Standalone variant — used outside the hero's absolutely-positioned
+   scene (e.g. project detail pages): normal document flow, no static
+   tilt (would look accidental sitting alone in a grid), still floats. */
+.device.tablet.static,
+.device.phone.static,
+.device.monitor.static {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  width: 100%;
+  max-width: none;
+  rotate: 0deg;
+}
+
+/* Subtle glass reflection over any screen content (real or placeholder) */
+.device-sheen {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  background: linear-gradient(
+    125deg,
+    rgba(255, 255, 255, 0.14) 0%,
+    transparent 22%,
+    transparent 68%,
+    rgba(255, 255, 255, 0.06) 100%
+  );
+  mix-blend-mode: overlay;
+}
+
+/* ============ Floating chips ============ */
+.float-chip {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 999px;
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.6);
+  z-index: 5;
+  animation: chip-float 5s ease-in-out infinite;
+}
+.chip-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px 1px currentColor;
+}
+@keyframes chip-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ============ Logo marquee ============ */
+.logo-marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    black 12%,
+    black 88%,
+    transparent
+  );
+}
+.logo-track {
+  display: flex;
+  width: max-content;
+  gap: 4.5rem;
+  animation: marquee 28s linear infinite;
+}
+.logo-word {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.28);
+  white-space: nowrap;
+  transition: color 0.3s;
+}
+.logo-word:hover {
+  color: rgba(255, 255, 255, 0.55);
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ============ Service / benefit cards ============ */
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+@keyframes border-spin {
+  to {
+    --angle: 360deg;
+  }
+}
+
+.service-card,
+.benefit-card {
+  position: relative;
+  border-radius: 20px;
+  padding: 32px 26px;
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.045),
+    rgba(255, 255, 255, 0.01)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.4s ease, box-shadow 0.4s ease;
+}
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background: radial-gradient(
+    280px circle at var(--mx, 50%) var(--my, 0%),
+    rgba(59, 130, 246, 0.18),
+    transparent 60%
+  );
+  transition: opacity 0.4s ease;
+}
+.service-card:hover::before {
+  opacity: 1;
+}
+/* Rotating gradient ring — only visible on hover, one full turn ≈ 3s */
+.service-card::after,
+.portfolio-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(
+    from var(--angle, 0deg),
+    transparent 0%,
+    rgba(59, 130, 246, 0.7) 12%,
+    transparent 26%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+.service-card:hover::after,
+.portfolio-card:hover::after {
+  opacity: 1;
+  animation: border-spin 3s linear infinite;
+}
+.service-card:hover,
+.benefit-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(59, 130, 246, 0.35);
+  box-shadow: 0 24px 48px -28px rgba(37, 99, 235, 0.45);
+}
+.service-icon {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: linear-gradient(
+    155deg,
+    rgba(59, 130, 246, 0.22),
+    rgba(59, 130, 246, 0.05)
+  );
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  color: #93c5fd;
+  margin-bottom: 20px;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    background 0.4s ease;
+}
+.service-card:hover .service-icon {
+  transform: scale(1.1) rotate(-6deg);
+  background: linear-gradient(
+    155deg,
+    rgba(59, 130, 246, 0.34),
+    rgba(59, 130, 246, 0.08)
+  );
+}
+
+.benefit-card {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 24px;
+}
+.benefit-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  color: #93c5fd;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.benefit-card:hover .benefit-icon {
+  transform: scale(1.08);
+}
+
+/* ============ Industry cards ============ */
+.industry-card {
+  position: relative;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  border-radius: 20px;
+  padding: 26px 24px;
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.045),
+    rgba(255, 255, 255, 0.01)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.4s ease, box-shadow 0.4s ease;
+}
+.industry-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(59, 130, 246, 0.35);
+  box-shadow: 0 24px 48px -28px rgba(37, 99, 235, 0.45);
+}
+.industry-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: linear-gradient(
+    155deg,
+    rgba(59, 130, 246, 0.22),
+    rgba(59, 130, 246, 0.05)
+  );
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  color: #93c5fd;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.industry-card:hover .industry-icon {
+  transform: scale(1.1) rotate(-6deg);
+}
+
+/* Nodes of the hub-and-spoke industry map */
+.map-node-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  color: #93c5fd;
+  background: linear-gradient(
+    160deg,
+    rgba(59, 130, 246, 0.22),
+    rgba(17, 24, 39, 0.95)
+  );
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  box-shadow: 0 0 0 7px var(--background), 0 10px 26px -12px rgba(37, 99, 235, 0.7);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.4s ease, box-shadow 0.4s ease;
+}
+.map-node-icon:hover {
+  transform: scale(1.08);
+  border-color: rgba(59, 130, 246, 0.7);
+  box-shadow: 0 0 0 7px var(--background), 0 14px 32px -10px rgba(37, 99, 235, 0.9);
+}
+
+/* ============ Technology pills ============ */
+.tech-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 11px 22px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: rgba(255, 255, 255, 0.85);
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.015)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.35s ease, color 0.35s ease, box-shadow 0.35s ease;
+}
+.tech-pill:hover {
+  transform: translateY(-3px);
+  color: #fff;
+  border-color: rgba(59, 130, 246, 0.45);
+  box-shadow: 0 12px 28px -14px rgba(37, 99, 235, 0.7);
+}
+
+/* ============ Portfolio cards ============ */
+.portfolio-card {
+  position: relative;
+  border-radius: 24px;
+  padding: 1px;
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.02)
+  );
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s ease;
+}
+.portfolio-card:hover {
+  box-shadow: 0 30px 60px -30px rgba(37, 99, 235, 0.5);
+}
+.portfolio-card-inner {
+  border-radius: 23px;
+  background: var(--card);
+  overflow: hidden;
+}
+.portfolio-frame {
+  position: relative;
+  aspect-ratio: 16/11;
+  overflow: hidden;
+  background: radial-gradient(
+    circle at 30% 20%,
+    var(--pf1, #1d3a6e),
+    var(--pf2, #0b1120) 70%
+  );
+}
+.portfolio-frame-media {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.portfolio-card:hover .portfolio-frame-media {
+  transform: scale(1.06);
+}
+.portfolio-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.35),
+    transparent 40%
+  );
+  pointer-events: none;
+}
+
+.tag-pill {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--muted-foreground);
+}
+
+/* ============ Browser mockup (real screenshot gallery) ============ */
+.browser-mockup {
+  position: relative;
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #0c1322;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 30px 60px -22px rgba(0, 0, 0, 0.65),
+    0 0 0 1px rgba(255, 255, 255, 0.02);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.45s ease, border-color 0.45s ease;
+}
+.browser-mockup:hover {
+  transform: translateY(-4px);
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 0 34px 70px -20px rgba(37, 99, 235, 0.4);
+}
+.browser-mockup-chrome {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 12px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.browser-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+}
+.browser-mockup-url {
+  margin-left: 10px;
+  flex: 1;
+  max-width: 220px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--muted-foreground);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  padding: 4px 10px;
+  text-align: center;
+}
+.browser-mockup-viewport {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.browser-mockup-media {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.browser-mockup:hover .browser-mockup-media {
+  transform: scale(1.05);
+}
+.browser-mockup-sheen {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background: linear-gradient(
+    115deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 28%,
+    transparent 72%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  mix-blend-mode: overlay;
+}
+
+/* ============ Timeline ============ */
+.timeline-line {
+  position: absolute;
+  top: 26px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.15) 10%,
+    rgba(255, 255, 255, 0.15) 90%,
+    transparent
+  );
+  display: none;
+}
+@media (min-width: 1024px) {
+  .timeline-line {
+    display: block;
+  }
+}
+
+/* Below lg the steps stack vertically, so the horizontal rail is replaced
+   by a short vertical connector under each number (except the last), which
+   keeps the six steps reading as one sequence instead of six loose cards. */
+.timeline-step {
+  position: relative;
+}
+@media (max-width: 1023px) {
+  .timeline-step:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    left: 25px;
+    top: 56px;
+    bottom: -30px;
+    width: 2px;
+    border-radius: 2px;
+    background: linear-gradient(
+      180deg,
+      rgba(59, 130, 246, 0.55),
+      rgba(59, 130, 246, 0.08)
+    );
+  }
+}
+
+.timeline-num {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(
+    160deg,
+    rgba(59, 130, 246, 0.25),
+    rgba(17, 24, 39, 0.9)
+  );
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.05rem;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 18px;
+  box-shadow: 0 0 0 6px var(--background);
+}
+
+/* ============ Testimonials ============ */
+.testimonial-card {
+  border-radius: 20px;
+  padding: 26px;
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.045),
+    rgba(255, 255, 255, 0.01)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.35s ease;
+}
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+.avatar-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+/* ============ Contact rows ============ */
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.95rem;
+  color: var(--muted-foreground);
+  transition: color 0.25s ease;
+}
+a.contact-row:hover {
+  color: #fff;
+}
+.contact-icon {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.22);
+  color: #93c5fd;
+}
+
+/* ============ Footer ============ */
+.footer-heading {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.social-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--muted-foreground);
+  transition: all 0.25s ease;
+}
+.social-icon:hover {
+  color: #fff;
+  background: rgba(59, 130, 246, 0.18);
+  border-color: rgba(59, 130, 246, 0.35);
+  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float-chip,
+  .logo-track {
+    animation: none !important;
+  }
+}

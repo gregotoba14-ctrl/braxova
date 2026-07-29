@@ -1,0 +1,41 @@
+# Netlify configuration for the BRAXOVA Next.js site.
+#
+# The @netlify/plugin-nextjs runtime is what keeps this a real Next.js app on
+# Netlify: it serves the prerendered App Router pages, runs next/image
+# optimization on demand, and handles /sitemap.xml, /robots.txt and the
+# generated OG images. Do NOT set `output: "export"` in next.config.ts — that
+# would strip image optimization and turn the site into a static dump.
+
+[build]
+  command = "npm run build"
+  # The plugin reads Next's own build output; this only needs to point at the
+  # project root that contains next.config.ts.
+  publish = ".next"
+
+[build.environment]
+  # Pin the major Node version so local and Netlify builds match.
+  NODE_VERSION = "20"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Long-cache the fingerprinted build assets. Everything under /_next/static is
+# content-hashed by Next, so it is safe to cache immutably.
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Project screenshots are stable filenames, so cache them for a day and allow
+# stale-while-revalidate rather than caching them forever.
+[[headers]]
+  for = "/portafolio/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
