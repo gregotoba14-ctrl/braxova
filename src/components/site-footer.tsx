@@ -1,48 +1,13 @@
 import Link from "next/link"
 
 import { BraxovaMark } from "@/components/brand-mark"
-
-function LinkedinGlyph() {
-  return (
-    <svg viewBox="0 0 20 20" fill="currentColor" className="size-4" aria-hidden="true">
-      <path d="M4.2 6.5h2.6v9.2H4.2V6.5Zm1.3-4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM8.7 6.5h2.5v1.3h.04c.35-.66 1.2-1.35 2.47-1.35 2.64 0 3.13 1.74 3.13 4v5.22h-2.6v-4.63c0-1.1-.02-2.52-1.54-2.52-1.54 0-1.78 1.2-1.78 2.44v4.71H8.7V6.5Z" />
-    </svg>
-  )
-}
-
-function InstagramGlyph() {
-  return (
-    <svg viewBox="0 0 20 20" fill="none" className="size-4" aria-hidden="true">
-      <rect x="3" y="3" width="14" height="14" rx="4" stroke="currentColor" strokeWidth="1.4" />
-      <circle cx="10" cy="10" r="3.2" stroke="currentColor" strokeWidth="1.4" />
-      <circle cx="14.1" cy="5.9" r="0.9" fill="currentColor" />
-    </svg>
-  )
-}
-
-function XGlyph() {
-  return (
-    <svg viewBox="0 0 20 20" fill="none" className="size-4" aria-hidden="true">
-      <path d="M4 4l12 12M16 4 4 16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-    </svg>
-  )
-}
-
-function WhatsappGlyph() {
-  return (
-    <svg viewBox="0 0 20 20" fill="none" className="size-4" aria-hidden="true">
-      <path
-        d="M10 3a7 7 0 0 0-6 10.6L3 17l3.5-1a7 7 0 1 0 3.5-13Z"
-        stroke="currentColor"
-        strokeWidth="1.4"
-      />
-      <path
-        d="M7.3 7.6c.2-.5.4-.5.7-.5h.5c.2 0 .4 0 .5.4.2.5.6 1.5.6 1.6.1.1.1.3 0 .4l-.4.5c-.1.2-.2.3-.1.5.3.5.8 1 1.3 1.4.5.4 1 .6 1.2.7.2.1.3.1.5-.1l.5-.6c.1-.2.3-.2.5-.1l1.4.7c.2.1.3.1.4.3.1.2.1.9-.2 1.3-.3.4-1.1.9-1.9.9-.7 0-2.3-.3-4-1.9-1.8-1.7-2.2-3-2.2-3.3 0-.3.2-.9.4-1.2Z"
-        fill="currentColor"
-      />
-    </svg>
-  )
-}
+import {
+  LinkedinGlyph,
+  InstagramGlyph,
+  XGlyph,
+  WhatsappGlyph,
+} from "@/components/social-icons"
+import { CONTACT_EMAIL, PHONE_DISPLAY, PHONE_E164, WHATSAPP_URL } from "@/lib/contact"
 
 const SERVICE_LINKS = [
   "Desarrollo Web",
@@ -55,7 +20,7 @@ const SERVICE_LINKS = [
 const COMPANY_LINKS = [
   { label: "Portafolio", href: "#portafolio" },
   { label: "Proceso", href: "#proceso" },
-  { label: "Testimonios", href: "#testimonios" },
+  { label: "Por qué BRAXOVA", href: "#por-que" },
   { label: "Preguntas frecuentes", href: "#faq" },
 ]
 
@@ -85,7 +50,13 @@ export function SiteFooter() {
               <a href="#" className="social-icon" aria-label="X (Twitter)">
                 <XGlyph />
               </a>
-              <a href="#" className="social-icon" aria-label="WhatsApp">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon"
+                aria-label="WhatsApp"
+              >
                 <WhatsappGlyph />
               </a>
             </div>
@@ -128,18 +99,18 @@ export function SiteFooter() {
             <ul className="flex flex-col gap-2.5">
               <li>
                 <a
-                  href="mailto:hola@braxova.com"
+                  href={`mailto:${CONTACT_EMAIL}`}
                   className="text-sm text-muted-foreground transition-colors hover:text-white"
                 >
-                  hola@braxova.com
+                  {CONTACT_EMAIL}
                 </a>
               </li>
               <li>
                 <a
-                  href="tel:+5493810000000"
+                  href={`tel:${PHONE_E164}`}
                   className="text-sm text-muted-foreground transition-colors hover:text-white"
                 >
-                  +54 9 381 000-0000
+                  {PHONE_DISPLAY}
                 </a>
               </li>
               <li>

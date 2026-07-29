@@ -5,6 +5,12 @@ import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { SITE_URL } from "@/lib/site"
+import {
+  CONTACT_EMAIL,
+  PHONE_E164,
+  LOCATION_CITY,
+  LOCATION_REGION,
+} from "@/lib/contact"
 import "./globals.css"
 
 const inter = Inter({
@@ -82,11 +88,12 @@ const jsonLd = {
   areaServed: "AR",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "San Miguel de Tucumán",
+    addressLocality: LOCATION_CITY,
+    addressRegion: LOCATION_REGION,
     addressCountry: "AR",
   },
-  email: "hola@braxova.com",
-  telephone: "+5493810000000",
+  email: CONTACT_EMAIL,
+  telephone: PHONE_E164,
   sameAs: [],
   makesOffer: [
     "Desarrollo Web",

@@ -82,7 +82,7 @@ export const PROJECTS: Project[] = [
       "Diseñamos y desarrollamos un sistema a medida con más de 13 módulos: turnos, historia clínica, paquetes de sesiones, caja, usuarios, documentos y evolución de pacientes con seguimiento fotográfico, todo en una sola plataforma.",
     results: [
       "13+ módulos operativos en producción",
-      "Horas administrativas ahorradas cada semana",
+      "Turnos, historias clínicas y pagos centralizados en un mismo sistema",
       "Cero planillas, información centralizada y auditable",
     ],
   },
@@ -107,7 +107,7 @@ export const PROJECTS: Project[] = [
     results: [
       "Gestión de socios centralizada",
       "Visibilidad inmediata de membresías vencidas",
-      "Menor pérdida de ingresos por renovaciones",
+      "Seguimiento centralizado de vencimientos y renovaciones",
     ],
     images: {
       desktop: "/portafolio/gym-olimpo/hero.jpg",
@@ -150,7 +150,7 @@ export const PROJECTS: Project[] = [
       "Diseñamos un sitio institucional rápido y mobile-first, con información clara de servicios, profesionales y un canal directo de contacto para agendar turnos.",
     results: [
       "Presencia digital profesional propia",
-      "Más consultas iniciadas desde el sitio",
+      "Canales de contacto visibles y accesibles desde cualquier dispositivo",
       "Experiencia optimizada para mobile",
     ],
   },
@@ -174,7 +174,7 @@ export const PROJECTS: Project[] = [
       "Creamos una landing enfocada en un único objetivo de conversión, con mensajes claros sobre el servicio y un formulario de contacto simple y rápido de completar.",
     results: [
       "Página enfocada en un solo objetivo de conversión",
-      "Formulario de contacto de alta finalización",
+      "Formulario de contacto breve y simple de completar",
       "Carga rápida en conexiones móviles",
     ],
   },
@@ -199,7 +199,7 @@ export const PROJECTS: Project[] = [
     results: [
       "Propiedades y clientes en una sola plataforma",
       "Seguimiento claro del estado de cada operación",
-      "Menos oportunidades perdidas por desorganización",
+      "Historial completo y trazable de cada operación",
     ],
   },
 ]

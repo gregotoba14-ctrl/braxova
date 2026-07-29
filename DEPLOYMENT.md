@@ -120,13 +120,42 @@ optimization and reduce the site to a static dump — exactly what we're avoidin
 | `/opengraph-image` | 1200×630 PNG |
 | DevTools → Network on a screenshot | Served from `/_next/image`, type `image/webp` |
 | Nonexistent URL | 404 page |
+| **Site configuration → Forms** | `contacto-braxova` listed after the first deploy |
+| Submit the live contact form | Appears within seconds under **Forms → contacto-braxova** |
+
+### Reading form submissions
+
+1. Netlify dashboard → your site → **Forms** in the left sidebar.
+2. Click **contacto-braxova** → each row is one submission, with all fields.
+3. **Forms → Settings and usage → Form notifications** → add an email
+   notification (or Slack/webhook) so new consultas land in
+   `gregorio.tobares@icloud.com` instead of requiring a manual check.
+
+If the form isn't listed after deploying: open **Deploys → (latest) → Deploy
+log** and search for "forms" — Netlify logs how many it detected during the
+build. It only registers forms it can find in the build's HTML output, so a
+missing form usually means the build didn't run cleanly (rerun `npm run
+build` locally first to confirm it's green).
 
 ---
 
-## 6. Known limitation — the contact form
+## 6. The contact form (Netlify Forms)
 
-The form validates fully (React Hook Form + Zod) but **does not send anything
-yet**; submission resolves locally. To start receiving messages, replace the
-timeout in `src/components/sections/contact.tsx` → `onSubmit()` with a real
-call. Simplest option on Netlify is Netlify Forms; otherwise a Next.js route
-handler posting to Resend/SendGrid.
+The form (`src/components/sections/contact.tsx`) posts real submissions to
+**Netlify Forms** — no third-party service, no API keys. It only works once
+deployed on Netlify; see §7 for how to check it.
+
+- Form name: `contacto-braxova`
+- Fields: nombre, empresa (opcional), email, teléfono (opcional), tipo de
+  proyecto, presupuesto, mensaje
+- Spam protection: honeypot field (`bot-field`), invisible and
+  `aria-hidden` so it never traps a screen-reader user
+- A hidden, unhydrated duplicate of the form ships in the same file so
+  Netlify's build-time scanner registers the field names with certainty
+- States: idle / submitting / success / error, announced via `aria-live`;
+  on error the typed data is preserved (no reset) and a WhatsApp link is
+  offered as a fallback
+
+**Netlify won't detect the form until you deploy** — `next dev` and
+`next start` have no Netlify Forms backend, so a local submit attempt will
+show the error state. That's expected, not a bug.

@@ -989,37 +989,6 @@
   box-shadow: 0 0 0 6px var(--background);
 }
 
-/* ============ Testimonials ============ */
-.testimonial-card {
-  border-radius: 20px;
-  padding: 26px;
-  background: linear-gradient(
-    160deg,
-    rgba(255, 255, 255, 0.045),
-    rgba(255, 255, 255, 0.01)
-  );
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-    border-color 0.35s ease;
-}
-.testimonial-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(59, 130, 246, 0.3);
-}
-.avatar-circle {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: #fff;
-  flex-shrink: 0;
-}
-
 /* ============ Contact rows ============ */
 .contact-row {
   display: flex;

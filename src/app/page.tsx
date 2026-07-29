@@ -7,7 +7,7 @@ import { Industries } from "@/components/sections/industries"
 import { Process } from "@/components/sections/process"
 import { Technologies } from "@/components/sections/technologies"
 import { Engineering } from "@/components/sections/engineering"
-import { Testimonials } from "@/components/sections/testimonials"
+import { WhyWorkWithBraxova } from "@/components/sections/why-work-with-braxova"
 import { Faq } from "@/components/sections/faq"
 import { Contact } from "@/components/sections/contact"
 
@@ -23,7 +23,7 @@ export default function Home() {
       <Process />
       <Technologies />
       <Engineering />
-      <Testimonials />
+      <WhyWorkWithBraxova />
       <Faq />
       <Contact />
     </main>

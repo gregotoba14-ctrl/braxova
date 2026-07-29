@@ -17,6 +17,10 @@ import {
   Briefcase,
   Sprout,
   Building2,
+  Puzzle,
+  MessageCircle,
+  Smartphone,
+  Headset,
 } from "lucide-react"
 
 export type Service = {
@@ -133,35 +137,35 @@ export const PROCESS: ProcessStep[] = [
   { n: "06", title: "Lanzamiento", desc: "Publicamos, monitoreamos y acompañamos el crecimiento post-lanzamiento." },
 ]
 
-export type Testimonial = {
-  initials: string
-  name: string
-  role: string
-  text: string
-  gradient: string
+// Reemplaza la sección de testimonios (eliminada por no ser verificable:
+// no había clientes reales citados). Beneficios verificables del servicio
+// en sí, no opiniones de terceros ni resultados no medidos.
+export type WorkingCommitment = {
+  icon: LucideIcon
+  title: string
+  desc: string
 }
 
-export const TESTIMONIALS: Testimonial[] = [
+export const WORKING_COMMITMENTS: WorkingCommitment[] = [
   {
-    initials: "MG",
-    name: "Martina Gómez",
-    role: "Directora, Centro de Kinesiología",
-    text: "BRAXOVA transformó por completo la forma en que gestionamos turnos y pacientes. El sistema es intuitivo y el soporte, excelente.",
-    gradient: "linear-gradient(155deg,#2563eb,#1d4ed8)",
+    icon: Puzzle,
+    title: "Desarrollo adaptado a cada negocio",
+    desc: "Nada de plantillas genéricas: cada sistema se construye a medida del proceso real del cliente.",
   },
   {
-    initials: "RF",
-    name: "Rodrigo Fernández",
-    role: "Dueño, Gym Olimpo",
-    text: "Ahora sabemos exactamente qué socios están al día y cuáles no. Nos ordenó la operación de punta a punta.",
-    gradient: "linear-gradient(155deg,#7c3aed,#5b21b6)",
+    icon: MessageCircle,
+    title: "Comunicación directa durante todo el proyecto",
+    desc: "Trato directo de principio a fin, sin intermediarios ni respuestas automáticas.",
   },
   {
-    initials: "CL",
-    name: "Camila López",
-    role: "Gerente, Sistema Inmobiliario",
-    text: "Automatizaron procesos que nos llevaban horas cada semana. Hoy corren solos y sin errores.",
-    gradient: "linear-gradient(155deg,#059669,#047857)",
+    icon: Smartphone,
+    title: "Interfaces modernas, rápidas y responsivas",
+    desc: "Pensadas para verse y funcionar bien en cualquier dispositivo, desde el primer día.",
+  },
+  {
+    icon: Headset,
+    title: "Acompañamiento después de la publicación",
+    desc: "El trabajo no termina en el lanzamiento: seguimos disponibles para ajustes y soporte.",
   },
 ]
 
@@ -271,6 +275,5 @@ export const NAV_LINKS = [
   { href: "#por-que", label: "Por qué nosotros" },
   { href: "#portafolio", label: "Portafolio" },
   { href: "#proceso", label: "Proceso" },
-  { href: "#testimonios", label: "Testimonios" },
   { href: "#faq", label: "FAQ" },
 ] as const

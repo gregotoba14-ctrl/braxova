@@ -32,10 +32,13 @@ const HERO_DEVICES: { device: DeviceType; slug: string }[] = [
   { device: "iphone", slug: "plantar" },
 ]
 
+// Cifras reales y verificables únicamente — nada de conteos inflados.
+// 5 proyectos, 4 sectores distintos (ver industryLabel en lib/projects.ts),
+// y el 100% es un compromiso de proceso (todo se entrega responsive), no
+// una estadística de resultados de terceros.
 const STATS = [
-  { target: 40, suffix: "+", label: "Proyectos entregados" },
-  { target: 8, suffix: "+", label: "Sistemas de gestión" },
-  { target: 15, suffix: "+", label: "Sitios web profesionales" },
+  { target: 5, suffix: "", label: "Proyectos desarrollados" },
+  { target: 4, suffix: "", label: "Sectores distintos" },
   { target: 100, suffix: "%", label: "Responsive" },
 ]
 
@@ -105,8 +108,8 @@ export function Hero() {
 
             <Reveal delay={0.2}>
               <p className="mt-5 border-l-2 border-accent-blue/50 pl-4 text-base leading-relaxed text-white/85">
-                Más de 40 proyectos desarrollados en salud, fitness,
-                inmobiliarias y empresas de servicios.
+                Proyectos desarrollados para clínicas, gimnasios e
+                inmobiliarias.
               </p>
             </Reveal>
 
@@ -132,7 +135,7 @@ export function Hero() {
             </Reveal>
 
             <Reveal delay={0.32}>
-              <div className="mt-14 grid grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-4 sm:gap-x-5">
+              <div className="mt-14 grid grid-cols-3 gap-x-6 gap-y-6">
                 {STATS.map((stat) => (
                   <div key={stat.label}>
                     <div className="font-display text-2xl font-bold">
