@@ -30,12 +30,12 @@ export type Project = {
   category:
     | "Landing Page"
     | "Corporate Website"
-    | "Management System"
+    | "Sistema de gestión"
     | "Dashboard"
     | "Automation"
-    | "Real Estate"
-    | "Medical"
-    | "Gym"
+    | "Inmobiliaria"
+    | "Salud"
+    | "Gimnasio"
   shortDescription: string
   description: string
   technologies: string[]
@@ -65,7 +65,7 @@ export const PROJECTS: Project[] = [
   {
     slug: "centro-de-kinesiologia",
     name: "Centro de Kinesiología",
-    category: "Management System",
+    category: "Sistema de gestión",
     shortDescription:
       "Sistema integral de gestión clínica: turnos, historias clínicas, paquetes de sesiones y facturación en un solo lugar.",
     description:
@@ -89,7 +89,7 @@ export const PROJECTS: Project[] = [
   {
     slug: "gym-olimpo",
     name: "Gym Olimpo",
-    category: "Gym",
+    category: "Gimnasio",
     shortDescription:
       "Plataforma de gestión para gimnasio: socios, membresías, accesos y pagos en un mismo panel.",
     description:
@@ -133,7 +133,7 @@ export const PROJECTS: Project[] = [
   {
     slug: "salud-y-movimiento",
     name: "Salud & Movimiento",
-    category: "Medical",
+    category: "Salud",
     shortDescription:
       "Sitio corporativo para un centro de salud, pensado para transmitir confianza y facilitar el contacto.",
     description:
@@ -181,7 +181,7 @@ export const PROJECTS: Project[] = [
   {
     slug: "sistema-inmobiliario",
     name: "Sistema Inmobiliario",
-    category: "Real Estate",
+    category: "Inmobiliaria",
     shortDescription:
       "Plataforma de gestión inmobiliaria para propiedades, clientes y seguimiento de operaciones.",
     description:

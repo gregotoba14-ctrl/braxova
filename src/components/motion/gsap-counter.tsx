@@ -57,7 +57,7 @@ export function GsapCounter({ target, suffix = "", className }: GsapCounterProps
 
   return (
     <span ref={ref} className={className}>
-      0{suffix}
+      {target}{suffix}
     </span>
   )
 }

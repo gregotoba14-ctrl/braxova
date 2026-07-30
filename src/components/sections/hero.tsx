@@ -37,8 +37,8 @@ const HERO_DEVICES: { device: DeviceType; slug: string }[] = [
 // y el 100% es un compromiso de proceso (todo se entrega responsive), no
 // una estadística de resultados de terceros.
 const STATS = [
-  { target: 5, suffix: "", label: "Proyectos desarrollados" },
-  { target: 4, suffix: "", label: "Sectores distintos" },
+  { target: 5, suffix: "+", label: "Proyectos desarrollados" },
+  { target: 4, suffix: "", label: "Sectores" },
   { target: 100, suffix: "%", label: "Responsive" },
 ]
 
