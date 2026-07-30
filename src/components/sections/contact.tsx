@@ -47,9 +47,10 @@ import {
   type ContactFormValues,
 } from "@/lib/contact-schema"
 
-// Netlify identifies the form by this name at build time (it scans the
-// prerendered HTML for a <form data-netlify="true" name="...">) and again
-// at submit time via the hidden "form-name" field below.
+// Netlify registers this form from public/__forms.html at deploy time (see
+// that file for why — @netlify/plugin-nextjs v5 no longer scans React's
+// prerendered output) and matches submissions to it via the "form-name"
+// field below.
 const NETLIFY_FORM_NAME = "contacto-braxova"
 
 /** Netlify Forms expects a classic urlencoded POST body, not JSON. */
@@ -84,7 +85,7 @@ export function Contact() {
 
     setStatus("submitting")
     try {
-      const response = await fetch("/", {
+      const response = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encodeFormData({
@@ -200,19 +201,25 @@ export function Contact() {
                   className="grid gap-5 sm:grid-cols-2"
                   name={NETLIFY_FORM_NAME}
                   method="POST"
-                  data-netlify="true"
-                  data-netlify-honeypot="bot-field"
                   noValidate
                 >
-                  {/* Required so Netlify's form processor knows which
-                      registered form this POST belongs to. */}
+                  {/* No data-netlify attributes here on purpose: this form is
+                      always submitted via the fetch() in onSubmit, never a
+                      native browser POST, so those attributes would do
+                      nothing except risk confusing @netlify/plugin-nextjs's
+                      build-time check. The actual Netlify registration —
+                      including the honeypot wiring — comes from
+                      public/__forms.html; "form-name" below just has to
+                      match it so submissions land against the right form. */}
                   <input type="hidden" name="form-name" value={NETLIFY_FORM_NAME} />
 
                   {/* Honeypot: real visitors never see or fill this in (it's
                       hidden from both the layout and screen readers via
                       aria-hidden, so it never traps a legitimate submission
                       from an assistive-tech user). Bots that auto-fill every
-                      field trip it, and Netlify silently drops the submit. */}
+                      field trip it, and Netlify silently drops the submit —
+                      as long as the field name matches "bot-field" declared
+                      in public/__forms.html. */}
                   <p className="hidden" aria-hidden="true">
                     <label>
                       No completar este campo si sos humano
@@ -419,26 +426,6 @@ export function Contact() {
             </div>
           </Reveal>
         </div>
-      </div>
-
-      {/* Static duplicate of the form above, required by Netlify: the real
-          form is rendered by a client component, and while Next does
-          prerender its initial HTML, Netlify's own guidance for JS
-          frameworks is to also ship a plain, unhydrated form with the exact
-          same name and field names so its build-time bot can register it
-          with total certainty. Same fields, same "form-name" value, no
-          JS needed to read it — never shown or focusable. */}
-      <div style={{ display: "none" }} aria-hidden="true">
-        <form name={NETLIFY_FORM_NAME} data-netlify="true" data-netlify-honeypot="bot-field">
-          <input type="text" name="name" />
-          <input type="text" name="company" />
-          <input type="email" name="email" />
-          <input type="tel" name="phone" />
-          <input type="text" name="project" />
-          <input type="text" name="budget" />
-          <textarea name="message" />
-          <input type="text" name="bot-field" />
-        </form>
       </div>
     </section>
   )

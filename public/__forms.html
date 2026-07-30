@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+  Required by @netlify/plugin-nextjs v5 (OpenNext-based) to support Netlify
+  Forms. Modern Next.js builds no longer emit fully-static HTML that
+  Netlify's deploy-time bot can scan for <form data-netlify> tags — this
+  file is a real, untouched static asset in /public that Next just copies
+  verbatim to the output, so it's what Netlify actually registers the form
+  from. It is never linked or shown to visitors.
+
+  Field names here MUST exactly match:
+    - the visible form in src/components/sections/contact.tsx
+    - the fetch("/__forms.html", ...) submission in the same file
+
+  Reference: https://opennext.js.org/netlify/forms
+-->
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>BRAXOVA — registro de formulario (no visitar)</title>
+  </head>
+  <body>
+    <form name="contacto-braxova" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contacto-braxova" />
+      <input type="text" name="name" />
+      <input type="text" name="company" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="project" />
+      <input type="text" name="budget" />
+      <textarea name="message"></textarea>
+      <input type="text" name="bot-field" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+2026-07-30T02:26:25.188540Z  INFO tailwindcss_oxide::scanner: Provided sources:
+2026-07-30T02:26:25.190949Z  INFO tailwindcss_oxide::scanner: Source: PublicSourceEntry { base: "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova", pattern: "**/*", negated: false }
+2026-07-30T02:26:25.191951Z  INFO tailwindcss_oxide::scanner: Optimized sources:
+2026-07-30T02:26:25.191979Z  INFO tailwindcss_oxide::scanner: Source: Auto { base: "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova" }
+2026-07-30T02:26:25.194086Z  INFO discover_sources: tailwindcss_oxide::scanner: enter
+2026-07-30T02:26:25.194111Z  INFO discover_sources:walk_synchronous: tailwindcss_oxide::scanner: enter
+2026-07-30T02:26:25.214798Z  INFO discover_sources:walk_synchronous: tailwindcss_oxide::scanner: exit
+2026-07-30T02:26:25.222934Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\app\\portafolio\\[slug]\\page.tsx"
+2026-07-30T02:26:25.223072Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\app\\robots.ts"
+2026-07-30T02:26:25.223136Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\sections\\why-braxova.tsx"
+2026-07-30T02:26:25.223219Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\ui\\select.tsx"
+2026-07-30T02:26:25.223261Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\app\\sitemap.ts"
+2026-07-30T02:26:25.223262Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\sections\\why-work-with-braxova.tsx"
+2026-07-30T02:26:25.223291Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\README.md"
+2026-07-30T02:26:25.223322Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\package.json"
+2026-07-30T02:26:25.223437Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\site-footer.tsx"
+2026-07-30T02:26:25.223445Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\_next\\static\\chunks\\main-417c85661b1e4834.js"
+2026-07-30T02:26:25.223579Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\site-header.tsx"
+2026-07-30T02:26:25.223657Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\functions\\manifest.json"
+2026-07-30T02:26:25.223692Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\social-icons.tsx"
+2026-07-30T02:26:25.223796Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\ui\\accordion.tsx"
+2026-07-30T02:26:25.223964Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\eslint.config.mjs"
+2026-07-30T02:26:25.224114Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\_next\\static\\chunks\\main-app-369ec057fb9e76dc.js"
+2026-07-30T02:26:25.224133Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\netlify.toml"
+2026-07-30T02:26:25.224178Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\netlify.toml"
+2026-07-30T02:26:25.224317Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\next.config.ts"
+2026-07-30T02:26:25.224390Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\ui\\badge.tsx"
+2026-07-30T02:26:25.224507Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\ui\\form.tsx"
+2026-07-30T02:26:25.224515Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\ui\\button.tsx"
+2026-07-30T02:26:25.224616Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\ui\\input.tsx"
+2026-07-30T02:26:25.224682Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\app\\apple-icon.tsx"
+2026-07-30T02:26:25.224721Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\ui\\label.tsx"
+2026-07-30T02:26:25.224847Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\app\\icon.tsx"
+2026-07-30T02:26:25.224851Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\scroll-to-top.tsx"
+2026-07-30T02:26:25.224898Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\_next\\static\\chunks\\139.7a5a8e93a21948c1.js"
+2026-07-30T02:26:25.224938Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\ui\\separator.tsx"
+2026-07-30T02:26:25.224972Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\sections\\contact.tsx"
+2026-07-30T02:26:25.224987Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\app\\layout.tsx"
+2026-07-30T02:26:25.225044Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\ui\\textarea.tsx"
+2026-07-30T02:26:25.225079Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\sections\\engineering.tsx"
+2026-07-30T02:26:25.225142Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\lib\\contact-schema.ts"
+2026-07-30T02:26:25.225167Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\app\\opengraph-image.tsx"
+2026-07-30T02:26:25.225180Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\sections\\faq.tsx"
+2026-07-30T02:26:25.225240Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\lib\\contact.ts"
+2026-07-30T02:26:25.225262Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\_next\\static\\chunks\\pages\\_app-82835f42865034fa.js"
+2026-07-30T02:26:25.225280Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\sections\\hero.tsx"
+2026-07-30T02:26:25.225310Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\app\\page.tsx"
+2026-07-30T02:26:25.225349Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\lib\\data.ts"
+2026-07-30T02:26:25.225373Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\sections\\industries.tsx"
+2026-07-30T02:26:25.225431Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\sections\\industry-map.tsx"
+2026-07-30T02:26:25.225529Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\postcss.config.mjs"
+2026-07-30T02:26:25.225598Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\_next\\static\\chunks\\app\\apple-icon\\route-12c0078459cf6791.js"
+2026-07-30T02:26:25.225618Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\sections\\portfolio.tsx"
+2026-07-30T02:26:25.225448Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\lib\\industry-icons.tsx"
+2026-07-30T02:26:25.225678Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\public\\__forms.html"
+2026-07-30T02:26:25.225685Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\_next\\static\\chunks\\255-3d881dfa8c72bc56.js"
+2026-07-30T02:26:25.225723Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\sections\\process.tsx"
+2026-07-30T02:26:25.225849Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\browser-mockup.tsx"
+2026-07-30T02:26:25.225849Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\lib\\og-image-template.tsx"
+2026-07-30T02:26:25.225884Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\_next\\static\\chunks\\pages\\_error-013f4188946cdd04.js"
+2026-07-30T02:26:25.225955Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\device-frame.tsx"
+2026-07-30T02:26:25.225955Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\lib\\projects.ts"
+2026-07-30T02:26:25.226046Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\lenis-provider.tsx"
+2026-07-30T02:26:25.226049Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\lib\\site.ts"
+2026-07-30T02:26:25.226109Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\app\\twitter-image.tsx"
+2026-07-30T02:26:25.226164Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\motion\\gsap-counter.tsx"
+2026-07-30T02:26:25.226224Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\_next\\static\\chunks\\app\\icon\\route-12c0078459cf6791.js"
+2026-07-30T02:26:25.226293Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\motion\\magnetic.tsx"
+2026-07-30T02:26:25.226326Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\_next\\static\\chunks\\327-110cf86b024f0098.js"
+2026-07-30T02:26:25.226332Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\brand-mark.tsx"
+2026-07-30T02:26:25.226338Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\_next\\static\\chunks\\app\\robots.txt\\route-12c0078459cf6791.js"
+2026-07-30T02:26:25.226226Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\lib\\utils.ts"
+2026-07-30T02:26:25.226393Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\motion\\reveal.tsx"
+2026-07-30T02:26:25.226455Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\_next\\static\\chunks\\polyfills-42372ed130431b0a.js"
+2026-07-30T02:26:25.226502Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\tsconfig.json"
+2026-07-30T02:26:25.226508Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\sections\\technologies.tsx"
+2026-07-30T02:26:25.225471Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\sections\\services.tsx"
+2026-07-30T02:26:25.226703Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\components\\sections\\trust-logos.tsx"
+2026-07-30T02:26:25.226773Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\_next\\static\\chunks\\app\\layout-668a98869e886982.js"
+2026-07-30T02:26:25.226906Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\_next\\static\\chunks\\app\\sitemap.xml\\route-12c0078459cf6791.js"
+2026-07-30T02:26:25.226957Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\_next\\static\\chunks\\webpack-fa3a1bd5aa875570.js"
+2026-07-30T02:26:25.226977Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\_next\\static\\chunks\\4bd1b696-c023c6e3521b1417.js"
+2026-07-30T02:26:25.227128Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\_next\\static\\chunks\\app\\page-e464c6d5a9666f19.js"
+2026-07-30T02:26:25.227283Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\_next\\static\\chunks\\app\\opengraph-image\\route-12c0078459cf6791.js"
+2026-07-30T02:26:25.227356Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\_next\\static\\chunks\\app\\_not-found\\page-813301c8636a62b2.js"
+2026-07-30T02:26:25.227488Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\_next\\static\\chunks\\app\\twitter-image\\route-12c0078459cf6791.js"
+2026-07-30T02:26:25.227544Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\_next\\static\\chunks\\660-4010414c475d5306.js"
+2026-07-30T02:26:25.227563Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\_next\\static\\chunks\\71-4608d88691e517ab.js"
+2026-07-30T02:26:25.227598Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\_next\\static\\jB0zy_zta3PGuer36kLd2\\_buildManifest.js"
+2026-07-30T02:26:25.227642Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\_next\\static\\chunks\\646.f342b7cffc01feb0.js"
+2026-07-30T02:26:25.227723Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\DEPLOYMENT.md"
+2026-07-30T02:26:25.227879Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\_next\\static\\chunks\\961-31024528eed55a44.js"
+2026-07-30T02:26:25.227975Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\__forms.html"
+2026-07-30T02:26:25.227973Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\_next\\static\\chunks\\c15bf2b0-52e8419f34af26ab.js"
+2026-07-30T02:26:25.228035Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\_next\\static\\chunks\\app\\portafolio\\[slug]\\page-f0b8c6a9f5167260.js"
+2026-07-30T02:26:25.228196Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\_next\\static\\jB0zy_zta3PGuer36kLd2\\_ssgManifest.js"
+2026-07-30T02:26:25.228234Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\_next\\static\\chunks\\framework-acd67e14855de5a2.js"
+2026-07-30T02:26:25.228305Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\components.json"
+2026-07-30T02:26:25.228349Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\_next\\static\\chunks\\985-471786ffa7319a8a.js"
+2026-07-30T02:26:25.228485Z  INFO discover_sources: tailwindcss_oxide::scanner: exit
+2026-07-30T02:26:25.228499Z  INFO extract_candidates: tailwindcss_oxide::scanner: enter
+2026-07-30T02:26:25.228504Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: enter
+2026-07-30T02:26:25.228511Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: enter
+2026-07-30T02:26:25.236793Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: exit
+2026-07-30T02:26:25.237035Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: exit
+2026-07-30T02:26:25.237053Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: enter
+2026-07-30T02:26:25.237057Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading 2 file(s)
+2026-07-30T02:26:25.238323Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\src\\app\\globals.css"
+2026-07-30T02:26:25.238826Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Mis documentos\\OneDrive\\Escritorio\\cloud code\\braxova\\.netlify\\static\\_next\\static\\css\\28837e8f6656b6dc.css"
+2026-07-30T02:26:25.238902Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: exit
+2026-07-30T02:26:25.238928Z  INFO extract_candidates:extract_css_variables: tailwindcss_oxide::scanner: enter
+2026-07-30T02:26:25.238949Z  INFO extract_candidates:extract_css_variables:extract: tailwindcss_oxide::scanner: enter
+2026-07-30T02:26:25.239347Z  INFO extract_candidates:extract_css_variables:extract: tailwindcss_oxide::scanner: exit
+2026-07-30T02:26:25.239377Z  INFO extract_candidates:extract_css_variables: tailwindcss_oxide::scanner: exit
+2026-07-30T02:26:25.240373Z  INFO extract_candidates: tailwindcss_oxide::scanner: exit
+2026-07-30T02:26:25.242399Z  INFO get_files: tailwindcss_oxide::scanner: enter
+2026-07-30T02:26:25.242417Z  INFO get_files:discover_sources: tailwindcss_oxide::scanner: enter
+2026-07-30T02:26:25.242422Z  INFO get_files:discover_sources: tailwindcss_oxide::scanner: exit
+2026-07-30T02:26:25.242513Z  INFO get_files: tailwindcss_oxide::scanner: exit
+2026-07-30T02:26:25.242825Z  INFO get_globs: tailwindcss_oxide::scanner: enter
+2026-07-30T02:26:25.242834Z  INFO get_globs:discover_sources: tailwindcss_oxide::scanner: enter
+2026-07-30T02:26:25.242838Z  INFO get_globs:discover_sources: tailwindcss_oxide::scanner: exit
+2026-07-30T02:26:25.254265Z  INFO get_globs: tailwindcss_oxide::scanner: exit

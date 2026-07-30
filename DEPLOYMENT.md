@@ -150,12 +150,34 @@ deployed on Netlify; see §7 for how to check it.
   proyecto, presupuesto, mensaje
 - Spam protection: honeypot field (`bot-field`), invisible and
   `aria-hidden` so it never traps a screen-reader user
-- A hidden, unhydrated duplicate of the form ships in the same file so
-  Netlify's build-time scanner registers the field names with certainty
 - States: idle / submitting / success / error, announced via `aria-live`;
   on error the typed data is preserved (no reset) and a WhatsApp link is
   offered as a fallback
 
-**Netlify won't detect the form until you deploy** — `next dev` and
-`next start` have no Netlify Forms backend, so a local submit attempt will
-show the error state. That's expected, not a bug.
+### How Netlify actually registers this form
+
+`@netlify/plugin-nextjs` v5 (the OpenNext-based adapter this project uses)
+**stopped scanning the app's rendered/prerendered pages for `<form>` tags**.
+A form embedded only inside a React component — even one Next prerenders to
+HTML at build time — is invisible to Netlify's form registration, and the
+build now fails outright if it finds `data-netlify` attributes in React
+output with no static counterpart to back them.
+
+The fix, straight from the adapter's own docs
+([opennext.js.org/netlify/forms](https://opennext.js.org/netlify/forms)):
+ship a real, untouched static HTML file. That's [`public/__forms.html`](./public/__forms.html)
+— it's copied verbatim into the deploy output (`.netlify/static/`), which is
+what Netlify's form scanner actually reads. It's never linked from the site
+and no visitor ever sees it.
+
+The visible React form submits with `fetch("/__forms.html", { method:
+"POST", ... })`, matched to the registered form via the `form-name` field.
+Field names in three places have to stay in sync — the visible form, the
+`fetch()` body, and `public/__forms.html` — if you ever add or rename a
+field, update all three.
+
+**Netlify won't process the submission until you deploy** — `next dev` and
+`next start` have no Netlify Forms backend, so a local submit attempt
+correctly shows the error state (the POST reaches a static file with no
+handler). That's expected, not a bug; it's also why the WhatsApp fallback
+matters — it's the one contact path that works everywhere, deployed or not.
