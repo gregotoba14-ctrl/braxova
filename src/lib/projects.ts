@@ -94,6 +94,8 @@ export const PROJECTS: Project[] = [
     ],
     images: {
       desktop: "/portafolio/kinesiologia/dashboard.png",
+      tablet: "/portafolio/kinesiologia/dashboard-tablet.png",
+      mobile: "/portafolio/kinesiologia/dashboard-mobile.png",
     },
     imagePosition: "0% top",
   },
@@ -166,6 +168,8 @@ export const PROJECTS: Project[] = [
     ],
     images: {
       desktop: "/portafolio/salud-movimiento/hero.png",
+      tablet: "/portafolio/salud-movimiento/hero-tablet.png",
+      mobile: "/portafolio/salud-movimiento/hero-mobile.png",
     },
   },
   {
@@ -193,6 +197,7 @@ export const PROJECTS: Project[] = [
     ],
     images: {
       desktop: "/portafolio/plantar/hero.png",
+      tablet: "/portafolio/plantar/hero-tablet.png",
       mobile: "/portafolio/plantar/hero-mobile.webp",
     },
   },
@@ -222,6 +227,7 @@ export const PROJECTS: Project[] = [
     images: {
       desktop: "/portafolio/aeroagro/hero.webp",
       tablet: "/portafolio/aeroagro/hero-mobile.webp",
+      mobile: "/portafolio/aeroagro/hero-phone.png",
     },
   },
 ]
