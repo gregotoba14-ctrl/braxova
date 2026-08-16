@@ -28,7 +28,7 @@ const CHIPS = [
 const HERO_DEVICES: { device: DeviceType; slug: string }[] = [
   { device: "desktop", slug: "gym-olimpo" },
   { device: "macbook", slug: "centro-de-kinesiologia" },
-  { device: "ipad", slug: "sistema-inmobiliario" },
+  { device: "ipad", slug: "aeroagro" },
   { device: "iphone", slug: "plantar" },
 ]
 

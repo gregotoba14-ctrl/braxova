@@ -11,6 +11,7 @@ export type IndustryIconKey =
   | "stethoscope"
   | "footprints"
   | "building"
+  | "agro"
 
 export type ProjectImages = {
   desktop?: string
@@ -36,6 +37,7 @@ export type Project = {
     | "Inmobiliaria"
     | "Salud"
     | "Gimnasio"
+    | "Agro"
   shortDescription: string
   description: string
   technologies: string[]
@@ -47,6 +49,11 @@ export type Project = {
   solution: string
   results: string[]
   images?: ProjectImages
+  /** CSS object-position override for the images above. Only set when the
+   *  default centered/top crop hides something important (e.g. a logo
+   *  living in a left sidebar); every other project relies on the default
+   *  object-top behavior. */
+  imagePosition?: string
   /** Real screenshots for the case-study page gallery. When present,
    *  the detail page shows these inside browser mockups instead of the
    *  device-frame placeholder trio. */
@@ -85,6 +92,10 @@ export const PROJECTS: Project[] = [
       "Turnos, historias clínicas y pagos centralizados en un mismo sistema",
       "Cero planillas, información centralizada y auditable",
     ],
+    images: {
+      desktop: "/portafolio/kinesiologia/dashboard.png",
+    },
+    imagePosition: "0% top",
   },
   {
     slug: "gym-olimpo",
@@ -153,6 +164,9 @@ export const PROJECTS: Project[] = [
       "Canales de contacto visibles y accesibles desde cualquier dispositivo",
       "Experiencia optimizada para mobile",
     ],
+    images: {
+      desktop: "/portafolio/salud-movimiento/hero.png",
+    },
   },
   {
     slug: "plantar",
@@ -177,30 +191,36 @@ export const PROJECTS: Project[] = [
       "Formulario de contacto breve y simple de completar",
       "Carga rápida en conexiones móviles",
     ],
+    images: {
+      desktop: "/portafolio/plantar/hero.png",
+    },
   },
   {
-    slug: "sistema-inmobiliario",
-    name: "Sistema Inmobiliario",
-    category: "Inmobiliaria",
+    slug: "aeroagro",
+    name: "Aeroagro",
+    category: "Agro",
     shortDescription:
-      "Plataforma de gestión inmobiliaria para propiedades, clientes y seguimiento de operaciones.",
+      "Sitio web para una empresa de tecnología aplicada al agro, enfocado en presentar soluciones de agricultura de precisión y facilitar el contacto comercial.",
     description:
-      "Sistema de gestión para una inmobiliaria, centralizando la carga de propiedades, el seguimiento de clientes interesados y el estado de cada operación en curso.",
-    technologies: [],
-    brand: { c1: "#3a2a2a", c2: "#0b1120" },
+      "Sitio web para una empresa de tecnología aplicada al agro, enfocado en presentar soluciones de agricultura de precisión y facilitar el contacto comercial.",
+    technologies: ["Tailwind"],
+    brand: { c1: "#1e3a24", c2: "#0b1120" },
     device: "ipad",
-    industryIcon: "building",
-    industryLabel: "Inmobiliaria",
-    deliverables: ["Sistema de gestión", "Panel administrativo"],
+    industryIcon: "agro",
+    industryLabel: "Agro",
+    deliverables: ["Sitio corporativo", "Mobile responsive"],
     challenge:
-      "El seguimiento de propiedades y clientes se manejaba entre planillas y mensajes sueltos, dificultando saber en qué estado estaba cada operación.",
+      "La empresa necesitaba un sitio web profesional para presentar sus soluciones de agricultura de precisión y facilitar que los clientes potenciales puedan contactarlos.",
     solution:
-      "Desarrollamos una plataforma centralizada para cargar propiedades, asociar clientes interesados y llevar el seguimiento de cada operación de principio a fin.",
+      "Diseñamos un sitio corporativo que presenta claramente los productos y servicios de agricultura de precisión, con un canal de contacto comercial simple y accesible desde cualquier dispositivo.",
     results: [
-      "Propiedades y clientes en una sola plataforma",
-      "Seguimiento claro del estado de cada operación",
-      "Historial completo y trazable de cada operación",
+      "Sitio corporativo con presentación clara de productos y servicios",
+      "Canal de contacto comercial accesible desde el sitio",
+      "Experiencia optimizada para mobile",
     ],
+    images: {
+      desktop: "/portafolio/aeroagro/hero.webp",
+    },
   },
 ]
 

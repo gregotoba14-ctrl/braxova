@@ -44,6 +44,7 @@ function ScreenContent({
           alt={`Captura de pantalla del proyecto ${project.name}`}
           fill
           className="object-cover object-top"
+          style={project.imagePosition ? { objectPosition: project.imagePosition } : undefined}
           sizes="(max-width: 768px) 90vw, 600px"
         />
         <div className="device-sheen" />

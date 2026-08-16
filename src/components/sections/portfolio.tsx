@@ -94,6 +94,7 @@ function PortfolioCard({ project }: { project: Project }) {
                 alt={`Captura de pantalla del proyecto ${project.name}`}
                 fill
                 className="object-cover object-top"
+                style={project.imagePosition ? { objectPosition: project.imagePosition } : undefined}
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             ) : (
