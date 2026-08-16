@@ -193,6 +193,7 @@ export const PROJECTS: Project[] = [
     ],
     images: {
       desktop: "/portafolio/plantar/hero.png",
+      mobile: "/portafolio/plantar/hero-mobile.webp",
     },
   },
   {
@@ -220,6 +221,7 @@ export const PROJECTS: Project[] = [
     ],
     images: {
       desktop: "/portafolio/aeroagro/hero.webp",
+      tablet: "/portafolio/aeroagro/hero-mobile.webp",
     },
   },
 ]
