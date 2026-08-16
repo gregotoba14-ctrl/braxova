@@ -83,42 +83,42 @@ export const BENEFITS: Benefit[] = [
   {
     icon: Clock,
     title: "Ahorrá tiempo real",
-    desc: "Automatizamos tareas repetitivas para que tu equipo se enfoque en lo que importa.",
+    desc: "Reducí tareas repetitivas y dedicá más tiempo a lo que realmente importa.",
   },
   {
     icon: TrendingUp,
     title: "Aumentá tus ventas",
-    desc: "Sitios y sistemas diseñados para convertir visitas en clientes, no solo para verse bien.",
+    desc: "Sitios y sistemas pensados para convertir más oportunidades en clientes.",
   },
   {
     icon: Zap,
     title: "Automatizá procesos",
-    desc: "Conectamos tus herramientas para eliminar trabajo manual y reducir errores humanos.",
+    desc: "Conectá tareas y procesos para trabajar de forma más simple y reducir errores.",
   },
   {
     icon: Code2,
-    title: "Arquitectura moderna",
-    desc: "Tecnología actual, mantenible y lista para crecer sin reescrituras costosas.",
+    title: "Todo más organizado",
+    desc: "Centralizá información, tareas y procesos para tener mayor control de tu negocio.",
   },
   {
     icon: Compass,
-    title: "Posicionamiento SEO",
-    desc: "Estructura técnica pensada para que te encuentren en Google desde el día uno.",
+    title: "Mejor presencia online",
+    desc: "Una presencia digital profesional, rápida y preparada para que tus clientes te encuentren.",
   },
   {
     icon: BarChart3,
     title: "Crece con tu negocio",
-    desc: "Sistemas preparados para más usuarios, más datos y más operaciones sin fricción.",
+    desc: "Soluciones preparadas para acompañarte a medida que sumás clientes, operaciones y nuevas necesidades.",
   },
   {
     icon: Shield,
-    title: "Seguridad primero",
-    desc: "Buenas prácticas y estándares que protegen tu información y la de tus clientes.",
+    title: "Información protegida",
+    desc: "Buenas prácticas para cuidar la información de tu negocio y de tus clientes.",
   },
   {
     icon: Cloud,
-    title: "Listo para la nube",
-    desc: "Infraestructura cloud moderna, disponible y accesible desde cualquier lugar.",
+    title: "Acompañamiento cercano",
+    desc: "Comunicación directa durante el proyecto y soporte para que la solución siga funcionando como necesitás.",
   },
 ]
 
@@ -129,12 +129,12 @@ export type ProcessStep = {
 }
 
 export const PROCESS: ProcessStep[] = [
-  { n: "01", title: "Discovery", desc: "Entendemos tu negocio, objetivos y usuarios antes de escribir una sola línea de código." },
-  { n: "02", title: "Estrategia", desc: "Definimos alcance, arquitectura y plan de trabajo con entregas claras." },
-  { n: "03", title: "Diseño", desc: "Prototipamos la experiencia visual hasta lograr un producto que enamore." },
-  { n: "04", title: "Desarrollo", desc: "Construimos con estándares profesionales, en sprints cortos y visibles." },
-  { n: "05", title: "Testing", desc: "Probamos a fondo funcionalidad, rendimiento y seguridad antes de lanzar." },
-  { n: "06", title: "Lanzamiento", desc: "Publicamos, monitoreamos y acompañamos el crecimiento post-lanzamiento." },
+  { n: "01", title: "Descubrimiento", desc: "Entendemos tu negocio, tus necesidades y qué problema tenemos que resolver." },
+  { n: "02", title: "Estrategia", desc: "Definimos el alcance, las prioridades y el camino más adecuado para tu proyecto." },
+  { n: "03", title: "Diseño", desc: "Diseñamos la experiencia y la interfaz antes de avanzar con el desarrollo." },
+  { n: "04", title: "Desarrollo", desc: "Convertimos el diseño en una solución funcional, rápida y preparada para crecer." },
+  { n: "05", title: "Pruebas", desc: "Revisamos funcionamiento, rendimiento y experiencia antes de publicar." },
+  { n: "06", title: "Lanzamiento", desc: "Publicamos el proyecto y verificamos que todo funcione correctamente." },
 ]
 
 // Reemplaza la sección de testimonios (eliminada por no ser verificable:
@@ -149,23 +149,23 @@ export type WorkingCommitment = {
 export const WORKING_COMMITMENTS: WorkingCommitment[] = [
   {
     icon: Puzzle,
-    title: "Desarrollo adaptado a cada negocio",
-    desc: "Nada de plantillas genéricas: cada sistema se construye a medida del proceso real del cliente.",
+    title: "Una solución pensada para tu negocio",
+    desc: "Entendemos cómo trabajás y desarrollamos una solución adaptada a tus necesidades reales.",
   },
   {
     icon: MessageCircle,
-    title: "Comunicación directa durante todo el proyecto",
-    desc: "Trato directo de principio a fin, sin intermediarios ni respuestas automáticas.",
+    title: "Comunicación directa",
+    desc: "Hablás directamente con quien desarrolla tu proyecto, con un seguimiento claro durante todo el proceso.",
   },
   {
     icon: Smartphone,
-    title: "Interfaces modernas, rápidas y responsivas",
-    desc: "Pensadas para verse y funcionar bien en cualquier dispositivo, desde el primer día.",
+    title: "Diseño pensado para tus usuarios",
+    desc: "Creamos experiencias simples, modernas y fáciles de usar en cualquier dispositivo.",
   },
   {
     icon: Headset,
-    title: "Acompañamiento después de la publicación",
-    desc: "El trabajo no termina en el lanzamiento: seguimos disponibles para ajustes y soporte.",
+    title: "Acompañamiento después del lanzamiento",
+    desc: "Después de publicar, podemos seguir acompañando la evolución, los ajustes y las mejoras del proyecto.",
   },
 ]
 
@@ -177,27 +177,27 @@ export type FaqItem = {
 export const FAQ: FaqItem[] = [
   {
     q: "¿Cuánto tiempo toma desarrollar un proyecto?",
-    a: "Depende del alcance: una landing page puede estar lista en 1-2 semanas, mientras que un sistema de gestión completo suele tomar entre 4 y 10 semanas. En la etapa de Discovery te damos un cronograma concreto.",
+    a: "El tiempo depende del tipo de proyecto, su alcance y funcionalidades. Antes de comenzar definimos las etapas y una estimación clara de los tiempos de desarrollo.",
   },
   {
     q: "¿Qué tecnologías utilizan?",
-    a: "Trabajamos con stacks modernos como Next.js, React, Node.js, PostgreSQL y servicios cloud como Supabase, Vercel y Netlify, eligiendo en cada caso la tecnología más adecuada para tu proyecto.",
+    a: "Trabajamos con tecnologías como Next.js, React, TypeScript, Tailwind, Node, PostgreSQL, Supabase y Netlify, eligiendo las herramientas adecuadas según las necesidades de cada proyecto.",
   },
   {
     q: "¿Ofrecen soporte después del lanzamiento?",
-    a: "Sí. Todos los proyectos incluyen un período de soporte post-lanzamiento, y ofrecemos planes de mantenimiento continuo para quienes necesitan acompañamiento a largo plazo.",
+    a: "Sí. Podemos acompañarte después del lanzamiento con ajustes, mejoras y mantenimiento según las necesidades del proyecto.",
   },
   {
     q: "¿El sitio o sistema me pertenece por completo?",
-    a: "Sí, una vez finalizado el proyecto y realizado el pago correspondiente, el código y los activos son 100% tuyos, sin ataduras ni licencias ocultas.",
+    a: "Las condiciones de entrega, acceso al código y propiedad del proyecto se definen claramente antes de comenzar, para que sepas desde el primer día qué incluye la entrega.",
   },
   {
     q: "¿Trabajan con empresas fuera de Argentina?",
-    a: "Sí, trabajamos de forma remota con clientes de toda Latinoamérica y otras regiones, coordinando reuniones y entregas según tu huso horario.",
+    a: "Sí. Podemos trabajar de forma remota con empresas y profesionales de distintas ubicaciones, coordinando reuniones y entregas de manera online.",
   },
   {
     q: "¿Cómo se maneja el presupuesto y los pagos?",
-    a: "Definimos un presupuesto cerrado antes de comenzar, dividido en hitos de pago asociados a entregas concretas, para que siempre sepas en qué etapa está tu inversión.",
+    a: "Antes de comenzar definimos el alcance, presupuesto y forma de pago del proyecto. Las condiciones se acuerdan de manera clara según el tipo y tamaño del desarrollo.",
   },
 ]
 
@@ -244,14 +244,14 @@ export const INDUSTRIES: Industry[] = [
 // marketing claims, so this section reads differently from BENEFITS
 // (which is framed around client outcomes).
 export const ENGINEERING_STANDARDS = [
-  { title: "Código limpio", desc: "Legible y fácil de retomar por cualquier equipo." },
-  { title: "Escalable", desc: "Preparado para más usuarios y más datos." },
-  { title: "Documentado", desc: "Entregamos el proyecto explicado, no una caja negra." },
-  { title: "SEO técnico", desc: "HTML semántico y metadatos desde la base." },
-  { title: "Alto rendimiento", desc: "Optimizado para cargar rápido de verdad." },
-  { title: "Seguridad", desc: "Buenas prácticas y dependencias al día." },
-  { title: "Responsive", desc: "Probado en mobile, tablet y desktop." },
-  { title: "Mantenimiento", desc: "Pensado para evolucionar sin reescribir todo." },
+  { title: "Código limpio", desc: "Desarrollos ordenados y preparados para evolucionar." },
+  { title: "Escalable", desc: "Pensado para acompañar el crecimiento de tu negocio." },
+  { title: "Documentado", desc: "Una estructura clara para facilitar futuras mejoras." },
+  { title: "SEO técnico", desc: "Buenas bases técnicas para mejorar la visibilidad en buscadores." },
+  { title: "Alto rendimiento", desc: "Optimizamos cada proyecto para ofrecer una experiencia rápida y fluida." },
+  { title: "Seguridad", desc: "Aplicamos buenas prácticas para proteger tu proyecto y su información." },
+  { title: "Responsive", desc: "Experiencias adaptadas a celular, tablet y computadora." },
+  { title: "Mantenimiento", desc: "Construido para poder actualizarse y mejorar con el tiempo." },
 ] as const
 
 // Flat list, rendered as a centered wrap — avoids the orphan row a rigid
@@ -262,12 +262,9 @@ export const TECHNOLOGIES = [
   "TypeScript",
   "Tailwind",
   "Node",
-  "Laravel",
   "PostgreSQL",
   "Supabase",
-  "Firebase",
-  "Docker",
-  "AWS",
+  "Netlify",
 ] as const
 
 export const NAV_LINKS = [

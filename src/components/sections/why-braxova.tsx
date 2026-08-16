@@ -19,14 +19,14 @@ export function WhyBraxova() {
             </Reveal>
             <Reveal delay={0.08}>
               <h2 className="mt-4 font-display text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl">
-                Todo lo que ganás al trabajar con nosotros
+                Tecnología que simplifica tu negocio.
               </h2>
             </Reveal>
             <Reveal delay={0.16}>
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-                Cada proyecto está pensado para generar resultados concretos
-                en tu negocio: más ventas, menos tareas manuales y un sistema
-                que crece con vos.
+                Cada solución está pensada para resolver problemas reales:
+                ahorrar tiempo, ordenar procesos y ayudarte a hacer crecer tu
+                negocio.
               </p>
             </Reveal>
             <Reveal delay={0.24}>

@@ -8,13 +8,13 @@
 export const CONTACT_EMAIL = "gregorio.tobares@icloud.com"
 
 /** Human-readable, for display and the `tel:` link. */
-export const PHONE_DISPLAY = "+54 9 3472 586643"
+export const PHONE_DISPLAY = "+54 9 3472 647511"
 
 /** E.164, no spaces — required by Schema.org `telephone` and `tel:` hrefs. */
-export const PHONE_E164 = "+5493472586643"
+export const PHONE_E164 = "+5493472647511"
 
 /** wa.me expects digits only, no leading "+". */
-export const WHATSAPP_NUMBER = "5493472586643"
+export const WHATSAPP_NUMBER = "5493472647511"
 
 export const WHATSAPP_DEFAULT_MESSAGE =
   "Hola BRAXOVA, quiero consultar por un proyecto."

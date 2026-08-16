@@ -94,7 +94,7 @@ export const PROJECTS: Project[] = [
       "Plataforma de gestión para gimnasio: socios, membresías, accesos y pagos en un mismo panel.",
     description:
       "Sistema de administración pensado para la operación diaria de un gimnasio: altas de socios, control de membresías vencidas y seguimiento de pagos, con un panel simple para el personal de recepción.",
-    technologies: ["Next.js", "PostgreSQL", "Tailwind"],
+    technologies: [],
     brand: { c1: "#3a2a1e", c2: "#0b1120" },
     device: "desktop",
     industryIcon: "dumbbell",
@@ -138,7 +138,7 @@ export const PROJECTS: Project[] = [
       "Sitio corporativo para un centro de salud, pensado para transmitir confianza y facilitar el contacto.",
     description:
       "Sitio web institucional para un centro de salud y rehabilitación, con foco en presentar los servicios de forma clara y facilitar que los pacientes agenden una consulta.",
-    technologies: ["Next.js", "Tailwind", "Framer Motion"],
+    technologies: [],
     brand: { c1: "#1e3a2e", c2: "#0b1120" },
     device: "iphone",
     industryIcon: "stethoscope",
@@ -162,7 +162,7 @@ export const PROJECTS: Project[] = [
       "Landing page de alto impacto para presentar un servicio de salud podal y captar consultas.",
     description:
       "Landing page enfocada en conversión para un servicio especializado en salud podal, con un mensaje directo y un flujo de contacto simplificado.",
-    technologies: ["Next.js", "Tailwind", "React Hook Form"],
+    technologies: [],
     brand: { c1: "#331e3a", c2: "#0b1120" },
     device: "ipad",
     industryIcon: "footprints",
@@ -186,7 +186,7 @@ export const PROJECTS: Project[] = [
       "Plataforma de gestión inmobiliaria para propiedades, clientes y seguimiento de operaciones.",
     description:
       "Sistema de gestión para una inmobiliaria, centralizando la carga de propiedades, el seguimiento de clientes interesados y el estado de cada operación en curso.",
-    technologies: ["React", "Node.js", "PostgreSQL"],
+    technologies: [],
     brand: { c1: "#3a2a2a", c2: "#0b1120" },
     device: "ipad",
     industryIcon: "building",

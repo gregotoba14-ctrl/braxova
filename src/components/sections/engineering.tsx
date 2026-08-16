@@ -9,7 +9,7 @@ export function Engineering() {
       <div className="mx-auto max-w-5xl px-6 lg:px-8">
         <div className="mx-auto mb-16 max-w-2xl text-center">
           <Reveal>
-            <span className="eyebrow">Ingeniería</span>
+            <span className="eyebrow">Nuestro estándar</span>
           </Reveal>
           <Reveal delay={0.08}>
             <h2 className="mt-4 font-display text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl">
@@ -18,8 +18,8 @@ export function Engineering() {
           </Reveal>
           <Reveal delay={0.16}>
             <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-              No desde el marketing, desde la ingeniería. Esto es lo que
-              incluye cada proyecto que entregamos.
+              Cada proyecto está pensado para funcionar bien hoy y seguir
+              creciendo con tu negocio.
             </p>
           </Reveal>
         </div>

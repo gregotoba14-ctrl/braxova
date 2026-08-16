@@ -130,8 +130,8 @@ export function Contact() {
             </Reveal>
             <Reveal delay={0.16}>
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-                Contanos sobre tu proyecto y te respondemos en menos de
-                24&nbsp;hs con una propuesta clara.
+                Contanos sobre tu proyecto y te ayudamos a definir la mejor
+                solución para tu negocio.
               </p>
             </Reveal>
 
@@ -380,7 +380,7 @@ export function Contact() {
                         </>
                       ) : (
                         <>
-                          Solicitar presupuesto
+                          Enviar consulta
                           <ArrowRight className="size-4" />
                         </>
                       )}
@@ -416,7 +416,8 @@ export function Contact() {
                       )}
                       {status === "idle" && (
                         <p className="text-center text-xs text-muted-foreground/70">
-                          Te respondemos por email en menos de 24 horas hábiles.
+                          Revisamos cada consulta de forma personalizada y te
+                          respondemos por email.
                         </p>
                       )}
                     </div>

@@ -15,13 +15,13 @@ export function Industries() {
           </Reveal>
           <Reveal delay={0.08}>
             <h2 className="mt-4 font-display text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl">
-              Industrias en las que desarrollamos soluciones
+              Soluciones para distintos tipos de negocio
             </h2>
           </Reveal>
           <Reveal delay={0.16}>
             <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-              Conocemos los procesos de cada rubro, así el software se adapta a
-              tu negocio y no al revés.
+              Diseñamos cada proyecto según las necesidades y procesos de tu
+              negocio.
             </p>
           </Reveal>
         </div>

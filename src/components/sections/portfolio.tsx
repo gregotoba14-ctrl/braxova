@@ -21,13 +21,13 @@ export function Portfolio() {
           </Reveal>
           <Reveal delay={0.08}>
             <h2 className="mt-4 font-display text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl">
-              Proyectos diseñados para convertir
+              Proyectos que convierten ideas en soluciones reales
             </h2>
           </Reveal>
           <Reveal delay={0.16}>
             <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-              Una muestra real de los productos que construimos para
-              nuestros clientes.
+              Sitios web y sistemas desarrollados para resolver necesidades
+              concretas de cada negocio.
             </p>
           </Reveal>
         </div>
@@ -147,7 +147,7 @@ function PortfolioCard({ project }: { project: Project }) {
             href={`/portafolio/${project.slug}`}
             className="group/cta mt-auto inline-flex h-11 w-fit items-center gap-2 rounded-xl border border-white/12 bg-white/[0.04] px-5 text-sm font-medium transition-colors hover:border-accent-blue/40 hover:bg-accent-blue/10"
           >
-            Ver caso de éxito
+            Ver proyecto
             <ArrowRight className="size-4 transition-transform duration-300 group-hover/cta:translate-x-1" />
           </Link>
         </div>

@@ -118,7 +118,7 @@ export function SiteFooter() {
                   href="#contacto"
                   className="text-sm text-muted-foreground transition-colors hover:text-white"
                 >
-                  Solicitar presupuesto
+                  Hablemos
                 </Link>
               </li>
             </ul>

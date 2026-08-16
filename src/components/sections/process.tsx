@@ -12,13 +12,13 @@ export function Process() {
           </Reveal>
           <Reveal delay={0.08}>
             <h2 className="mt-4 font-display text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl">
-              Un método claro, de principio a fin
+              Un proceso claro, de principio a fin
             </h2>
           </Reveal>
           <Reveal delay={0.16}>
             <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-              Seis etapas para pasar de una idea a un producto en producción,
-              sin sorpresas.
+              De la primera idea al lanzamiento, cada etapa tiene un objetivo
+              claro.
             </p>
           </Reveal>
         </div>
