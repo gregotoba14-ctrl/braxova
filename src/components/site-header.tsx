@@ -91,7 +91,7 @@ export function SiteHeader() {
           <div className="hidden lg:block">
             <Magnetic className="inline-block">
               <Button asChild className="btn-glow rounded-xl px-5 h-10">
-                <Link href="#contacto">Solicitar presupuesto</Link>
+                <Link href="#contacto">Hablemos</Link>
               </Button>
             </Magnetic>
           </div>
@@ -132,7 +132,7 @@ export function SiteHeader() {
                 className="btn-glow mt-2 justify-center rounded-xl"
                 onClick={() => setMenuOpen(false)}
               >
-                <Link href="#contacto">Solicitar presupuesto</Link>
+                <Link href="#contacto">Hablemos</Link>
               </Button>
             </nav>
           </motion.div>

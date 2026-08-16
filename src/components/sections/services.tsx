@@ -19,8 +19,8 @@ export function Services() {
           </Reveal>
           <Reveal delay={0.16}>
             <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-              Del diseño a la automatización: un solo equipo, un solo estándar
-              de calidad.
+              Del diseño a la automatización: todo conectado bajo un mismo
+              estándar de calidad.
             </p>
           </Reveal>
         </div>

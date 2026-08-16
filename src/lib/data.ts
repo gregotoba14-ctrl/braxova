@@ -62,13 +62,13 @@ export const SERVICES: Service[] = [
   },
   {
     icon: BarChart3,
-    title: "Dashboards",
-    desc: "Paneles a medida que transforman tus datos en decisiones claras, en tiempo real.",
+    title: "Datos y Reportes",
+    desc: "Información clara y centralizada para entender tu negocio y tomar mejores decisiones.",
   },
   {
     icon: Cloud,
-    title: "Soluciones Cloud",
-    desc: "Infraestructura moderna, escalable y segura para que tu sistema crezca sin fricción.",
+    title: "Soporte y Escalabilidad",
+    desc: "Soluciones preparadas para funcionar de forma segura, estable y crecer junto a tu negocio.",
   },
 ]
 

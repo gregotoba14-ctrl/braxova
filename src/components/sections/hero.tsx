@@ -108,7 +108,7 @@ export function Hero() {
 
             <Reveal delay={0.2}>
               <p className="mt-5 border-l-2 border-accent-blue/50 pl-4 text-base leading-relaxed text-white/85">
-                Proyectos desarrollados para clínicas, gimnasios e
+                Soluciones desarrolladas para salud, fitness, comercios e
                 inmobiliarias.
               </p>
             </Reveal>
@@ -118,7 +118,7 @@ export function Hero() {
                 <Magnetic className="inline-block">
                   <Button asChild size="lg" className="btn-glow group h-12 rounded-xl px-7 text-base">
                     <Link href="#contacto">
-                      Solicitar presupuesto
+                      Contame tu proyecto
                       <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
                     </Link>
                   </Button>
